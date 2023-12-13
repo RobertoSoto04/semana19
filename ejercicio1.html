@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con Evento Onclick</title>
+</head>
+<body>
+
+    <h2>Formulario con Evento Onclick</h2>
+    
+    <label for="control1">Control 1:</label>
+    <input type="text" id="control1" value="">
+
+    <label for="control2">Control 2:</label>
+    <input type="text" id="control2" value="">
+
+    <label for="control3">Control 3:</label>
+    <input type="text" id="control3" value="">
+
+    <label for="control4">Control 4:</label>
+    <input type="text" id="control4" value="">
+
+    <label for="control5">Control 5:</label>
+    <input type="text" id="control5" value="">
+
+    <button onclick="guardar()">Guardar</button>
+
+    <script>
+        function guardar() {
+            const control1 = document.getElementById('control1').value;
+            const control2 = document.getElementById('control2').value;
+            const control3 = document.getElementById('control3').value;
+            const control4 = document.getElementById('control4').value;
+            const control5 = document.getElementById('control5').value;
+
+            console.log('Control 1:', control1);
+            console.log('Control 2:', control2);
+            console.log('Control 3:', control3);
+            console.log('Control 4:', control4);
+            console.log('Control 5:', control5);
+        }
+    </script>
+
+</body>
+</html>

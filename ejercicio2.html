@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con Validación y Cambio de Color</title>
+    <style>
+        .input-vacio {
+            background-color: grey;
+        }
+        .input-lleno {
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Formulario con Validación y Cambio de Color</h2>
+
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" oninput="validarCampo('nombre')">
+
+    <label for="dui">DUI:</label>
+    <input type="text" id="dui" oninput="validarCampo('dui')">
+
+    <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+    <input type="text" id="fechaNacimiento" oninput="validarCampo('fechaNacimiento')">
+
+    <label for="genero">Género:</label>
+    <input type="text" id="genero" oninput="validarCampo('genero')">
+
+    <label for="departamento">Departamento:</label>
+    <input type="text" id="departamento" oninput="validarCampo('departamento')">
+
+    <script>
+        function validarCampo(id) {
+            const input = document.getElementById(id);
+            if (input.value.trim() === '') {
+                input.classList.remove('input-lleno');
+                input.classList.add('input-vacio');
+            } else {
+                input.classList.remove('input-vacio');
+                input.classList.add('input-lleno');
+            }
+        }
+    </script>
+
+</body>
+</html>
